@@ -7,6 +7,7 @@ import imag6 from './assets/bird6.jpg';
 import imag7 from './assets/bird7.jpg';
 
 
+// Dejo todas las imágenes juntas acá para que el carrusel solo lea este arreglo.
 export const data = [
     { id: 1, imgUrl: imag1 },
     { id: 2, imgUrl: imag2 },

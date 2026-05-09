@@ -6,9 +6,11 @@ export const App = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const length = data.length
 
+  // Uso el índice actual para moverme entre imágenes sin salirme del arreglo.
   const prev = () => setCurrentIndex(i => (i - 1 + length) % length)
   const next = () => setCurrentIndex(i => (i + 1) % length)
 
+  // El carrusel avanza solo cada 5 segundos, pero igual se puede controlar a mano.
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex(i => (i + 1) % length)

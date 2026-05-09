@@ -1,4 +1,4 @@
-/* Estilos del carrusel */
+/* Todo lo visual del carrusel está agrupado acá para que sea fácil de ajustar. */
 .carousel {
   display: flex;
   flex-direction: column;
@@ -7,6 +7,7 @@
   padding: 18px;
 }
 
+/* La imagen principal y las flechas comparten este bloque central. */
 .carousel-inner {
   position: relative;
   width: 340px;
@@ -16,6 +17,7 @@
   justify-content: center;
 }
 
+/* La tarjeta de la imagen tiene sombra y bordes suaves para que destaque sin verse pesada. */
 .image-wrapper {
   width: 100%;
   height: 100%;
@@ -28,6 +30,7 @@
   justify-content: center;
 }
 
+/* La imagen ocupa todo el espacio disponible sin deformarse. */
 .image-wrapper img {
   width: 100%;
   height: 100%;
@@ -35,6 +38,7 @@
   display: block;
 }
 
+/* Botones laterales para pasar de una imagen a otra. */
 .arrow {
   position: absolute;
   top: 50%;
@@ -57,6 +61,7 @@
 
 .arrow:active { transform: translateY(-50%) scale(0.98) }
 
+/* Los puntitos de abajo sirven para ubicar rápido la imagen actual. */
 .dots {
   display: flex;
   gap: 10px;
@@ -64,6 +69,7 @@
   justify-content: center;
 }
 
+/* Estado normal del indicador. */
 .dot {
   width: 12px;
   height: 12px;
@@ -74,6 +80,7 @@
   transition: transform 150ms ease, background 150ms ease;
 }
 
+/* Cuando el punto está activo, se nota un poco más para que no haya duda. */
 .dot.active {
   background: #333;
   transform: scale(1.25);
@@ -81,6 +88,7 @@
 
 .dot:focus { outline: 2px solid rgba(66,153,225,0.6) }
 
+/* En pantallas chicas acomodo todo para que no se rompa el diseño. */
 @media (max-width: 420px) {
   .carousel-inner { width: 300px; height: 420px }
 }
@@ -91,6 +99,7 @@ body {
 
 }
 
+/* Esta clase queda lista por si después quiero mostrar otra galería o bloque de imágenes. */
 .container-images {
  width: 100%;
  height: 500px;

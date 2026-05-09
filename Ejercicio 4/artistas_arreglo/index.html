@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Tabla sencilla para mostrar los datos de los artistas de forma ordenada. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artistas</title>
     <style>
+        /* El diseño apunta a que la tabla se vea limpia y fácil de leer. */
         body {
             font-family: Arial, sans-serif;
             padding: 40px 20px;
@@ -14,16 +16,19 @@
             flex-direction: column;
             align-items: center;
         }
+        /* El contenedor limita el ancho para que la tabla no se vea gigante. */
         .container {
             width: 100%;
             max-width: 760px;
         }
+        /* El título acompaña la tabla sin robarle protagonismo. */
         h1 {
             text-align: center;
             margin-bottom: 18px;
             font-size: 1.6rem;
             color: #2f3b4a;
         }
+        /* La tabla tiene sombra, borde suave y filas alternadas para leer mejor. */
         table {
             border-collapse: collapse;
             width: 100%;
@@ -32,16 +37,19 @@
             overflow: hidden;
             box-shadow: 0 8px 20px rgba(31,41,55,0.08);
         }
+        /* Las celdas comparten el mismo espaciado para que todo quede alineado. */
         th, td {
             padding: 14px 16px;
             text-align: left;
             border-bottom: 1px solid #edf2f7;
         }
+        /* El encabezado resalta para distinguir rápido cada columna. */
         th {
             background: linear-gradient(90deg,#4CAF50,#43a047);
             color: white;
             font-weight: 600;
         }
+        /* El hover y el zebra ayudan a seguir la fila sin perderse. */
         tbody tr:hover {
             background-color: #f1f6f9;
         }
@@ -51,6 +59,7 @@
     </style>
 </head>
 <body>
+    <!-- La información se rellena sola desde el script. -->
     <h1>Tabla de Artistas</h1>
     <table>
         <thead>
@@ -65,6 +74,7 @@
         </tbody>
     </table>
 
+    <!-- El JS va al final para que la tabla ya exista cuando se cargue la data. -->
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,15 +1,19 @@
 function calcularInteres() {
+  // Saco el dinero que escribió la persona y también agarro el contenedor donde voy a mostrar el resultado.
   let cantidad = parseFloat(document.getElementById("cantidad").value);
   let resultado = document.getElementById("resultado");
 
+  // Si no meten un número válido, corto aquí para no hacer cuentas raras.
   if (isNaN(cantidad) || cantidad <= 0) {
     resultado.innerHTML = "<p>Por favor, ingresa una cantidad válida.</p>";
     return;
   }
 
+  // Estoy tomando 30 días porque así lo pide el ejercicio y me sirve para comparar los rendimientos.
   let diasDelMes = 30;
 
   let calcularRendimientoDiario = (capital, tasaAnual) => {
+    // Primero convierto la tasa anual a una diaria y luego voy sumando interés compuesto día por día.
     let tasaDiaria = tasaAnual / 365; 
     let total = capital;
     let rendimientoPrimerDia = capital * tasaDiaria;

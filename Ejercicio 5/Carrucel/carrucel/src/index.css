@@ -1,3 +1,4 @@
+/* Variables base para que los colores, tipografías y sombras se mantengan parejos en toda la app. */
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -50,10 +51,12 @@
   }
 }
 
+/* Ajuste general de la página para que el contenedor principal quede centrado y limpio. */
 body {
   margin: 0;
 }
 
+/* Este es el marco general donde vive la app. */
 #root {
   width: 1126px;
   max-width: 100%;
@@ -66,6 +69,7 @@ body {
   box-sizing: border-box;
 }
 
+/* Estilos compartidos para títulos y texto base. */
 h1,
 h2 {
   font-family: var(--heading);
@@ -95,6 +99,7 @@ p {
   margin: 0;
 }
 
+/* Código y bloques pequeños con el mismo lenguaje visual. */
 code,
 .counter {
   font-family: var(--mono);
